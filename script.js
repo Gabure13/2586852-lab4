@@ -64,7 +64,9 @@ async function searchCountry(countryName) {
         
     } catch (error) {
         // Show user-friendly error message
+        errorMessage.textContent = error.message;
     } finally {
         // Hide spinner
+        spinner.classList.add('hidden');
     }
 }
